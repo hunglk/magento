@@ -3,9 +3,19 @@
 <!--
 Default layout, loads most of the pages
 -->
-
     <default>
-
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/website.css</stylesheet></action>
+            <action method="addItem"> <type>skin_js</type>
+                <name>js/jquery.min.js</name><params/>
+            </action>
+            <action method="addItem"> <type>skin_js</type>
+                <name>js/jquery.tinycarousel.min.js</name><params/>
+            </action>
+            <action method="addItem"> <type>skin_js</type>
+                <name>js/editor.js</name><params/>
+            </action>
+        </reference>
         <!-- Mage_Checkout -->
         <reference name="top.links">
             <block type="checkout/links" name="checkout_cart_link">
@@ -19,13 +29,31 @@ Default layout, loads most of the pages
             <remove name="right.permanent.callout"/>
             <remove name="right.poll"/>
 
-            <block type="checkout/cart_crosssell" name="checkout.cart.crosssell" as="crosssell" template="checkout/cart/crosssell.phtml"/>
-
+            <block type="checkout/cart_crosssell" name="checkout.cart.crosssell" as="crosssell"
+                   template="checkout/cart/crosssell.phtml"/>
+            <block type="cms/block" name="StaticBlockCart">
+                <action method="setBlockId">
+                    <block_id>StaticBlockCart</block_id>
+                </action>
+            </block>
             <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml" before="-">
-                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
-                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
-                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
-                <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+                <action method="addItemRender">
+                    <type>simple</type>
+                    <block>checkout/cart_item_renderer</block>
+                    <template>checkout/cart/sidebar/default.phtml</template>
+                </action>
+                <action method="addItemRender">
+                    <type>grouped</type>
+                    <block>checkout/cart_item_renderer_grouped</block>
+                    <template>checkout/cart/sidebar/default.phtml</template>
+                </action>
+                <action method="addItemRender">
+                    <type>configurable</type>
+                    <block>checkout/cart_item_renderer_configurable</block>
+                    <template>checkout/cart/sidebar/default.phtml</template>
+                </action>
+                <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label"
+                       module="checkout">
                     <label>Shopping Cart Sidebar Extra Actions</label>
                 </block>
             </block>

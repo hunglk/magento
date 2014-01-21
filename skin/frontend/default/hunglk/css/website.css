@@ -1,0 +1,31 @@
+/* Tiny Carousel */
+
+#slider5 { height: 1%; overflow:hidden; padding: 0 0 10px; margin: 0 0 0 50px;  }
+#slider5 .viewport { width: 240px; height: 340px; overflow: hidden; position: relative; }
+#slider5 .buttons { background:url("../images/buttons.png") no-repeat scroll 0 0 transparent; display: block; margin: 0 0 5px 25px; background-position: 0 -74px; text-indent: -999em; width: 39px; height: 37px; overflow: hidden; position: relative; }
+#slider5 .next { background-position: 0 -112px; margin: 5px 0 0 25px;  }
+#slider5 .disable { visibility: hidden; }
+#slider5 .overview { list-style: none; position: absolute; width: 240px; left: 0 top: 0; }
+#slider5 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 165px; border: 1px solid #dcdcdc; width: 236px;}
+
+.btn-card {
+    float: left;
+    width: 11px;
+    margin-top: -3px;
+    margin-left: 6px;
+}
+.btn-card .btn-up,
+.btn-card .btn-down {
+    background: url("../images/btn-up-down.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 4px;
+    text-indent: -9999px;
+    width: 11px;
+}
+.btn-card .btn-up {
+    background-position: left 0;
+}
+.btn-card .btn-down {
+    background-position: left bottom;
+    margin-top: -8px;
+}

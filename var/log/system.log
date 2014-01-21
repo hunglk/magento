@@ -1,0 +1,4 @@
+2014-01-16T09:01:33+00:00 ERR (3): Warning: Missing argument 1 for Mage_Core_Block_Abstract::unsetChild()  in C:\server\www\hung.local\public\magento\app\code\core\Mage\Core\Block\Abstract.php on line 442
+2014-01-16T09:01:33+00:00 ERR (3): Notice: Undefined variable: alias  in C:\server\www\hung.local\public\magento\app\code\core\Mage\Core\Block\Abstract.php on line 444
+2014-01-16T09:01:53+00:00 ERR (3): Warning: Missing argument 1 for Mage_Core_Block_Abstract::unsetChild()  in C:\server\www\hung.local\public\magento\app\code\core\Mage\Core\Block\Abstract.php on line 442
+2014-01-16T09:01:53+00:00 ERR (3): Notice: Undefined variable: alias  in C:\server\www\hung.local\public\magento\app\code\core\Mage\Core\Block\Abstract.php on line 444

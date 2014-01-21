@@ -427,6 +427,7 @@ class Mage_Wishlist_IndexController extends Mage_Wishlist_Controller_Abstract
             }
         }
         $this->_redirect('*', array('wishlist_id' => $wishlist->getId()));
+		//$this->_redirect('checkout/cart');
     }
 
     /**
