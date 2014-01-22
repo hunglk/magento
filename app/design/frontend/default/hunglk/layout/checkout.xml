@@ -29,13 +29,6 @@ Default layout, loads most of the pages
             <remove name="right.permanent.callout"/>
             <remove name="right.poll"/>
 
-            <block type="checkout/cart_crosssell" name="checkout.cart.crosssell" as="crosssell"
-                   template="checkout/cart/crosssell.phtml"/>
-            <block type="cms/block" name="StaticBlockCart">
-                <action method="setBlockId">
-                    <block_id>StaticBlockCart</block_id>
-                </action>
-            </block>
             <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml" before="-">
                 <action method="addItemRender">
                     <type>simple</type>
@@ -64,6 +57,12 @@ Default layout, loads most of the pages
         <label>Shopping Cart</label>
         <!-- Mage_Checkout -->
         <reference name="right">
+            <block type="checkout/cart_crosssell" name="checkout.cart.crosssell" as="crosssell" template="checkout/cart/crosssell.phtml"/>
+            <block type="cms/block" name="StaticBlockCart">
+                <action method="setBlockId">
+                    <block_id>StaticBlockCart</block_id>
+                </action>
+            </block>
             <action method="unsetChild"> </action>
         </reference>
         <reference name="root">

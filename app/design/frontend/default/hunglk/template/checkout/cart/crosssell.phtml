@@ -44,14 +44,26 @@
 						<div class="product-details">
 							<h3 class="product-name"><?php echo $this->escapeHtml($_item->getName()) ?></h3>
 							<?php echo $this->getPriceHtml($_item, true) ?>
-							<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+							<input type="checkbox" class="checkbox related-checkbox" id="related-checkbox" name="related_products[]" value="<?php echo $_item->getId() ?>">
 						</div>
 					</li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
 		<a class="buttons next" href="#">right</a>
+		<button type="button" onclick="addItemsProductToCart()" class="button btn-cart"><span><span>Add All Items To Cart</span></span></button>
+
 	</div>
 </div>
 <?php endif; ?>
 
+<script type="text/javascript">
+	function addItemsProductToCart(){
+		var checkboxes = jQuery('.related-checkbox');
+		var values = [];
+		for(var i=0;i<checkboxes.length;i++){
+			if(checkboxes[i].checked) values.push(checkboxes[i].value);
+		}
+		alert(values);
+	}
+</script>
