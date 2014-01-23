@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>Softprodigy_Multipleaddtocart</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSLv3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary> This Extension allows you to add multiple products at once to your cart. </summary>
+    <description>Customers come on the website and have to do Multiple add to carts on Category page to add Products to Cart. Sometimes they need to go inside the Products details page to change the Quantity if they want more then one.&#xD;
+&#xD;
+The extension makes this process much more comfortable for customers. With it, Customers can select multiple products and add all to the cart with a single click. This extension will allow the users to enter the Quantity from Category page itself.&#xD;
+&#xD;
+This will ease the shopping experience of the Customer and allows Customers to add bulk products with Single Go.</description>
+    <notes>This extension is now compatible with Magento CE 1.8.1</notes>
+    <authors><author><name>SoftProdigyINC</name><user>softprodigy</user><email>magento@softprodigy.com</email></author></authors>
+    <date>2013-12-24</date>
+    <time>12:37:52</time>
+    <contents><target name="magelocal"><dir name="Softprodigy"><dir name="Multipleaddtocart"><dir name="Block"><file name="Multipleaddtocart.php" hash="61fdd576d21a12ab4407bba9aa482e7e"/><dir name="Product"><file name="List.php" hash="7bb7f99c10b3463bcc2be9633e1ad5dd"/></dir></dir><dir name="Helper"><file name="Data.php" hash="95a509f7df376871fded7a14d59c5133"/></dir><dir name="Model"><file name="Multipleaddtocart.php" hash="d9ff39f349774ae37440788311ba4ed6"/><dir name="Mysql4"><dir name="Multipleaddtocart"><file name="Collection.php" hash="7100d2be247c3a5b4c3e70ae8e921759"/></dir><file name="Multipleaddtocart.php" hash="11e54176508ae797ad5f09f0c5dfb862"/></dir></dir><dir name="controllers"><file name="AddController.php" hash="9938e21bdb625177bac80c5fec0a815f"/></dir><dir name="etc"><file name="config.xml" hash="e6ad496575bec2ba6dad04bb918ef6ae"/><file name="system.xml" hash="335ab045a6bb915fbed3a9b2a9213fc8"/></dir><dir name="sql"><dir name="multipleaddtocart_setup"><file name="mysql4-install-1.0.1.php" hash="fc3842b4c4196c23474ad5d44db74429"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="multipleaddtocart.xml" hash="643c7aaa60173ef83fde79c0e1103ca4"/></dir><dir name="template"><dir name="multipleaddtocart"><dir name="product"><file name="list.phtml" hash="a6abf03be32ceb2bedcf1844da4569d3"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Softprodigy_Multipleaddtocart.xml" hash="5ff8aa9bec0a249bc718a03b141d7e5a"/></dir></target><target name="mage"><dir name="js"><dir name="jquery"><file name="global.js" hash="59bb5aa473f2761386449fa34db1498d"/><file name="jquery-1.10.2.min.js" hash="628072e7212db1e8cdacb22b21752cda"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.5.0</min><max>1.8.1</max></package><extension><name>gd</name><min>2.0.28</min><max>3.0</max></extension></required></dependencies>
+</package>
