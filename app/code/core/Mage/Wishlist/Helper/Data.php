@@ -310,6 +310,7 @@ class Mage_Wishlist_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @return  string
      */
+
     public function getMoveFromCartUrl($itemId)
     {
         return $this->_getUrl('wishlist/index/fromcart', array('item' => $itemId));

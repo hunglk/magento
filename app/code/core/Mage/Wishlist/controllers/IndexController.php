@@ -552,6 +552,7 @@ class Mage_Wishlist_IndexController extends Mage_Wishlist_Controller_Abstract
     /**
      * Add cart item to wishlist and remove from cart
      */
+
     public function fromcartAction()
     {
         $wishlist = $this->_getWishlist();

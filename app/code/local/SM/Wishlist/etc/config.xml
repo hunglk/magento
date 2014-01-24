@@ -5,14 +5,21 @@
             <version>0.1.0</version>
         </SM_Wishlist>
     </modules>
-    <!--<global>-->
-        <!--<rewrite>-->
-            <!--<sm_wishlist>-->
-                <!--<from><![CDATA[#^/wishlist/$#]]></from>-->
-                <!--<to>//</to>-->
-            <!--</sm_wishlist>-->
-        <!--</rewrite>-->
-    <!--</global>-->
+    <global>
+        <rewrite>
+            <sm_wishlist>
+                <from><![CDATA[#^/wishlist/$#]]></from>
+                <to>//</to>
+            </sm_wishlist>
+        </rewrite>
+        <helpers>
+            <wishlist>
+                <rewrite>
+                    <data>SM_Wishlist_Helper_Data</data>
+                </rewrite>
+            </wishlist>
+        </helpers>
+    </global>
     <frontend>
         <routers>
             <sm_wishlist>
@@ -24,4 +31,5 @@
             </sm_wishlist>
         </routers>
     </frontend>
+
 </config>
