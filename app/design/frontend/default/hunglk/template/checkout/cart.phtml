@@ -104,7 +104,6 @@
 									foreach($cartItems as $item) {
 										$arr_id[] = $item->getId();
 									}
-									print_r($arr_id);
 								?>
 								<a href="<?php echo $this->helper('wishlist')->getMoveAllFromCartUrl($arr_id); ?>" class="link-wishlist use-ajax"><?php echo $this->__('Save Bag to Wishlist'); ?></a>
 							<?php endif; ?>

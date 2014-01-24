@@ -24,12 +24,20 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<script language="JavaScript">
+	function selectAll(source) {
+		checkboxes = document.getElementsByName('wishlist_id[]');
+		for(var i in checkboxes)
+			checkboxes[i].checked = source.checked;
+	}
+</script>
 <?php
     $columns = $this->getColumns();
 ?>
 <table class="data-table" id="wishlist-table">
     <thead>
         <tr>
+			<th><input type="checkbox" id="selectall" onClick="selectAll(this)" />Select All</th>
             <?php foreach ($columns as $column): ?>
                 <th><?php echo $column->getTitle();?></th>
             <?php endforeach; ?>

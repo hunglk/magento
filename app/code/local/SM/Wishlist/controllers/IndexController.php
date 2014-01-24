@@ -4,6 +4,7 @@ require_once 'Mage/Wishlist/controllers/IndexController.php';
 
 class SM_Wishlist_IndexController extends Mage_Wishlist_IndexController
 {
+
 	public function allfromcartAction()
 	{
 		$wishlist = $this->_getWishlist();

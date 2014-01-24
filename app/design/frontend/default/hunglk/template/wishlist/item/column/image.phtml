@@ -28,7 +28,7 @@
 $item = $this->getItem();
 $product = $item->getProduct();
 ?>
-<input type="checkbox" name="" value=""/>
+<input type="checkbox" name="wishlist_id[]" class="wishlist_checkbox" value="<?php echo $item->getId() ?>" />
 <a class="product-image" href="<?php echo $this->getProductUrl($item) ?>" title="<?php echo $this->escapeHtml($product->getName()) ?>">
     <img src="<?php echo $this->helper('catalog/image')->init($product, 'small_image')->resize(113, 113); ?>" width="113" height="113" alt="<?php echo $this->escapeHtml($product->getName()) ?>" />
 </a>

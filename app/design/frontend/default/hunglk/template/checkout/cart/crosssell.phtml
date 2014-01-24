@@ -24,6 +24,7 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
 <?php
 /**
  * Cart cross sell items template
@@ -51,7 +52,7 @@
 			</ul>
 		</div>
 		<a class="buttons next" href="#">right</a>
-		<button type="button" onclick="addItemsProductToCart()" class="button btn-cart">
+		<button type="button" onclick="addItemsProductToCart1()" class="button btn-cart">
 			<span><span>Add Selected To Cart</span></span>
 		</button>
 
@@ -60,21 +61,26 @@
 <?php endif; ?>
 
 <script type="text/javascript">
-	function addItemsProductToCart(){
+	function addItemsProductToCart1(){
 		var checkboxes = jQuery('.related-checkbox');
 		var pro_id = new Array();
-		for(var i=0;i<checkboxes.length;i++){
+		for(var i=0;i<checkboxes.length;i++)
+		{
 			if(checkboxes[i].checked)
 				pro_id.push(checkboxes[i].value);
 		}
-		//alert(pro_id);
-		var key = jQuery("input[name='form_key']").val();
-		var url = '<?php echo $this->getUrl('checkout/cart/add');?>';
-		url += '?form_key=' + key;
-		url += '&product=' + pro_id[0];
-		pro_id.splice(0,1);
-		str_id = pro_id.join(',');
-		url += '&related_product=' + str_id;
-		setLocation(url);
+
+		if(pro_id.length > 0)
+		{
+			var key = jQuery("input[name='form_key']").val();
+			alert(key);
+			var url = '<?php echo $this->getUrl('checkout/cart/add');?>';
+			url += '?form_key=' + key;
+			url += '&product=' + pro_id[0];
+			pro_id.splice(0,1);
+			str_id = pro_id.join(',');
+			url += '&related_product=' + str_id;
+			setLocation(url);
+		}
 	}
 </script>
